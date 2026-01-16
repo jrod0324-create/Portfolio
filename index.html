@@ -1,0 +1,202 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jordan Rodino | Portfolio</title>
+    <style>
+        :root {
+            --bg-color: #f8fafc;
+            --header-bg: #1e293b;
+            --text-color: #334155;
+            --accent-color: #0d9488; 
+            --secondary-color: #ffffff;
+            --card-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 3rem 2rem;
+            background-color: var(--header-bg);
+            color: white;
+            border-bottom: 4px solid var(--accent-color);
+            margin-bottom: 2rem;
+        }
+
+        .header-text h1 { margin: 0; font-size: 2.5rem; letter-spacing: -1px; }
+        .subtitle { margin: 0; opacity: 0.9; font-weight: 300; }
+
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 12px;
+            border: 3px solid var(--accent-color);
+            object-fit: cover;
+            background-color: #475569;
+        }
+
+        section { padding: 0 2rem; margin-bottom: 3rem; }
+
+        h2 {
+            color: var(--header-bg);
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            margin-top: 2rem;
+        }
+
+        /* --- Project Card Styles --- */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: var(--secondary-color);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.2s ease;
+            border: 1px solid #e2e8f0;
+            box-shadow: var(--card-shadow);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover { transform: translateY(-5px); }
+
+        /* Project Image Styling */
+        .project-image {
+            width: 100%;
+            height: 200px; /* Fixed height for uniformity */
+            object-fit: cover; /* Ensures image fills space without stretching */
+            background-color: #cbd5e1; /* Grey placeholder color */
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .project-content { padding: 1.5rem; flex-grow: 1; }
+        .project-content h3 { margin-top: 0; color: var(--header-bg); }
+        
+        .contact-links {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .btn-resume {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: opacity 0.2s;
+        }
+
+        .btn-resume:hover { opacity: 0.9; }
+
+        .social-link {
+            color: var(--header-bg);
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        .social-link:hover { border-color: var(--accent-color); }
+
+        footer { text-align: center; padding: 2rem; font-size: 0.9rem; color: #64748b; }
+
+        @media (max-width: 600px) {
+            header { flex-direction: column-reverse; text-align: center; gap: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-text">
+            <h1>Jordan Rodino</h1>
+            <p class="subtitle">Mechanical Engineer | Problem Solver | Designer</p>
+        </div>
+        <img src="profile.jpg" alt="Jordan Rodino" class="profile-pic">
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            Hello! I'm a passionate engineer based in St Louis, Missouri. I possess a strong mechanical aptitude and desire for hands-on work. I have experience in advanced mechanical design and
+            am enthusiastic about applying my knowledge to real-world engineering challenges! When I'm not working on a project, you can find me playing basketball, surfing, or catching up on niche MLB stats and players.
+        </p>
+    </section>
+
+    <section id="projects">
+        <h2>Featured Projects</h2>
+        
+        <div class="project-grid">
+            <div class="project-card">
+                <img src="brake-bias.jpg" alt="Brake Bias Analysis" class="project-image">
+                <div class="project-content">
+                    <h3>Brake Bias Research</h3>
+                    <p>Used MATLAB and SolidWorks to analyze balance bar geometry, looking at displacements and different brake bias ratios. Used MATLAB to solve equations for optimal axial tilt.</p>
+                    <a href="https://gowustl-my.sharepoint.com/:p:/g/personal/j_b_rodino_wustl_edu/IQCrBe_aVX4wTY8aaQrkin26ASAw4RP_KBxflb8gJ--rr1Q?e=lidded" target="_blank" class="social-link"> &rarr;</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="projector-stand.jpg" alt="Projector Stand Design" class="project-image">
+                <div class="project-content">
+                    <h3>Projector Stand Design</h3>
+                    <p>Used SolidWorks and FEA simulations to design a 360 degree rotating projector screen with adjustable angles.</p>
+                    <a href="#" class="social-link"> &rarr;</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="it-system.jpg" alt="IT Organizational System" class="project-image">
+                <div class="project-content">
+                    <h3>Technological Organizational System</h3>
+                    <p>Used Excel and Action 1 Patch Management to establish an organizational system with updated wiring setups and firmware.</p>
+                    <a href="#" class="social-link"> &rarr;</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="ferris-wheel.jpg" alt="CAD Ferris Wheel" class="project-image">
+                <div class="project-content">
+                    <h3>CAD Ferris Wheel</h3>
+                    <p>Used SolidWorks to create a model with complete drawings and bill of materials of a model ferris wheel.</p>
+                    <a href="#" class="social-link"> &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="connect">
+        <h2>Let's Connect</h2>
+        <p>I am currently looking for new opportunities in mechanical design and engineering. Feel free to reach out!</p>
+        <div class="contact-links">
+            <a href="resume.pdf" class="btn-resume" target="_blank">View Resume (PDF)</a>
+            <a href="https://www.linkedin.com/in/jordan-rodino-a27487310" class="social-link" target="_blank">LinkedIn</a>
+            <a href="mailto:j.b.rodino@wustl.edu" class="social-link">Email</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Jordan Rodino</p>
+    </footer>
+
+</body>
+</html>
